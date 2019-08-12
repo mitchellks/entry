@@ -65,26 +65,45 @@ getOscarWinnerNames();
 */
 
 /*Declare the function 'createActor' */
-
-
 function createActor(fullName, oscars, line) {
-  var obj = {
-    fullName: fullName,
-    oscars: oscars,
-    line: line
-  };
-  return obj;
+        var obj = {
+            fullName: fullName,
+            oscars: oscars,
+            line: line,
+            sayLine: sayLine
+          };
+          return obj;
+
+
+
+function sayLine() {
+  console.log(this.line)
 }
 
-function sayLine(line) {
-  var actors = {
-    line: line,
-  };
-  return actors;
+function hasMoreOscars(actor2) {
+if (this.oscars < actor2.oscars) {
+return false;
+} else {
+return true;
 }
+}
+    
+    function GreaterOrEqual(actor) {
+      if (this.oscars >= 1) {
+        return (this.fullName) };
 
 
 let actors = [
+
+actors = actors.concat(createActor("Leonardo Di Caprio",1,"w"))
+actors = actors.concat(createActor("Samuel L Jackson",0,"D"))
+actors = actors.concat(createActor("Meryl Steep",3,"h"))
+actors = actors.concat(createActor("Oscar Isaac",0,"q"))
+actors = actors.concat(createActor("Lucy Liu",0,"e"))
+actors = actors.concat(createActor("Kate Winslett",1,"m"))
+]
+
+/*let actors = [
 
     leonardo = {
       fullName: "Leonardo DiCaprio",
@@ -195,3 +214,4 @@ let actors = [
 
 
           };
+*/
